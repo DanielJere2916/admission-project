@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ApplicantController;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UniversityRegistrartController;
@@ -26,6 +27,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//websitepages routes
+Route::get('/programs', [PagesController::class, 'programpage'])->name('programpage');
+Route::get('/campuses', [PagesController::class, 'campuspage'])->name('campusespage');
+Route::get('/studentlife', [PagesController::class, 'studentpage'])->name('studentpage');
+Route::get('/research', [PagesController::class, 'researchpage'])->name('researchpage');
+Route::get('/contact', [PagesController::class, 'contactpage'])->name('contactpage');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

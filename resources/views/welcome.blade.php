@@ -133,10 +133,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Programmes</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Campus Life</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('programpage') }}">Programmes</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('campusespage') }}">Campus Life</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('researchpage') }}">Research</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('contactpage') }}">Contact</a></li>
                 <li class="nav-item dropdown account-dropdown ms-3">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-user-circle fs-5"></i>
@@ -164,7 +164,7 @@
 </nav>
 
       <!-- Hero Section -->
-    <section class="hero-section text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/600'); padding: 175px 0;">
+    <section class="hero-section text-center" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('{{ asset('2.jpg') }}'); padding: 175px 0; background-size: cover;">
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
                 <h1 class="display-4 mb-4">Welcome to Our University</h1>
@@ -202,13 +202,13 @@
     </section>
 
     <!-- Featured Programmes -->
-    <section class="py-5">
+    <section class="py-5 px-5">
         <div class="container"></div>
             <h2 class="text-center mb-4">Featured Programmes</h2>
             <div class="row g-4">
                 <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Law">
+                        <img src="{{ asset('2.jpg') }}" class="card-img-top" alt="Law">
                         <div class="card-body">
                             <h5 class="card-title">Law</h5>
                             <p class="card-text">Bachelor's degree in Law with focus on modern legal practices.</p>
@@ -218,7 +218,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Computer Science">
+                        <img src="{{ asset('2.jpg') }}" class="card-img-top" alt="Computer Science">
                         <div class="card-body">
                             <h5 class="card-title">Computer Science</h5>
                             <p class="card-text">Advanced programming and software development courses.</p>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Public Health">
+                        <img src="{{ asset('2.jpg') }}"/api/placeholder/400/300" class="card-img-top" alt="Public Health">
                         <div class="card-body">
                             <h5 class="card-title">Public Health</h5>
                             <p class="card-text">Comprehensive health management and policy studies.</p>
@@ -238,7 +238,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Business">
+                        <img src="{{ asset('2.jpg') }}" class="card-img-top" alt="Business">
                         <div class="card-body">
                             <h5 class="card-title">Business Administration</h5>
                             <p class="card-text">Modern business management and leadership principles.</p>
@@ -430,7 +430,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Engineering Lab">
+                        <img src="{{ asset('2.jpg') }}" class="card-img-top" alt="Engineering Lab">
                         <div class="card-body">
                             <h5 class="card-title">New Engineering Lab Launch</h5>
                             <p class="card-text">State-of-the-art facility opening for engineering students.</p>
@@ -440,7 +440,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Alumni Success">
+                        <img src="{{ asset('2.jpg') }}" class="card-img-top" alt="Alumni Success">
                         <div class="card-body">
                             <h5 class="card-title">Alumni Success Stories</h5>
                             <p class="card-text">Recent graduates making waves in their respective industries.</p>
@@ -450,7 +450,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Research Breakthrough">
+                        <img src="{{ asset('2.jpg') }}" class="card-img-top" alt="Research Breakthrough">
                         <div class="card-body">
                             <h5 class="card-title">Research Breakthrough in Climate Science</h5>
                             <p class="card-text">University team's findings published in prestigious journal.</p>
