@@ -134,7 +134,8 @@
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('programpage') }}">Programmes</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('campusespage') }}">Campus Life</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('campusespage') }}">Campuses</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('studentpage') }}">Student Life</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('researchpage') }}">Research</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contactpage') }}">Contact</a></li>
                 <li class="nav-item dropdown account-dropdown ms-3">
