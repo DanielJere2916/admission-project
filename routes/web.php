@@ -40,8 +40,12 @@ Route::middleware(['auth', 'verified', 'rolemanager:Applicant'])->group(function
             Route::get('/dashboard', 'index')->name('applicant');
             Route::get('/select-application-type', 'selectApplicationType')->name('applicant.select-application-type');
             Route::get('/transactions', 'showTransactions')->name('applicant.transactions');
+            Route::get('/bridgingform', 'showBridging')->name('applicant.showbridgingform');
+            Route::get('/undergraduateform', 'showUndergraduate')->name('applicant.showUndergraduateform');
+            Route::get('/Postgraduateform', 'showPostgraduate')->name('applicant.showPostgraduateform');
             Route::get('/continue-application/{transaction}', 'continueApplication')->name('applicant.continue-application');
         });
+        
     });
     Route::controller(PaymentController::class)->group(function () {
         Route::prefix('payments')->group(function () {
@@ -116,5 +120,5 @@ Route::middleware(['auth'])->group(function () {
     Route::post('payments/callback', [PaymentController::class, 'handleCallback'])->name('payments.callback');
     Route::get('payments/transactions', [PaymentController::class, 'showTransactions'])->name('payments.transactions');
 });
-
 require __DIR__.'/auth.php';
+

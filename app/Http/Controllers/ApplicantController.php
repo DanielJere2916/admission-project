@@ -40,4 +40,57 @@ class ApplicantController extends Controller
 
         return view('applicant.transactions', compact('transactions'));
     }
+    public function showBridging()
+    {
+        $transactions = Transaction::with('intake')
+            ->where('user_id', auth()->id())
+            ->where('payment_status', 'success')
+            ->whereHas('intake', function ($query) {
+                $query->where('intake_type', 'Bridging');
+            })
+            ->latest()
+            ->first();
+
+        if (!$transactions) {
+            return redirect()->route('applicant')->with('error', 'Verify payment first for Bridging Intake.');
+        }
+
+        return view('applicant.applicationType.Bridging');
+    }
+    public function showUndergraduate()
+    {
+        $transactions = Transaction::with('intake')
+            ->where('user_id', auth()->id())
+            ->where('payment_status', 'success')
+            ->whereHas('intake', function ($query) {
+                $query->where('intake_type', 'Undergraduate');
+            })
+            ->latest()
+            ->first();
+
+        if (!$transactions) {
+            return redirect()->route('applicant')->with('error', 'Verify payment first for Undergraduate Intake.');
+        }
+
+        return view('applicant.applicationType.Undergraduate');
+    }
+    public function showPostgraduate()
+    {
+        $transactions = Transaction::with('intake')
+            ->where('user_id', auth()->id())
+            ->where('payment_status', 'success')
+            ->whereHas('intake', function ($query) {
+                $query->where('intake_type', 'Postgraduate');
+            })
+            ->latest()
+            ->first();
+
+        if (!$transactions) {
+            return redirect()->route('applicant')->with('error', 'Verify payment first for Postgraduate Intake.');
+        }
+
+        return view('applicant.applicationType.Postgraduate');
+    }
+
+
 }

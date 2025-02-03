@@ -54,16 +54,16 @@
                 <span class="align-middle">Bridging</span>
             </a>
         </li> --}}
-        <li class="sidebar-item {{ request()->routeIs('applicant')?'active':'' }}">
-            <a class="sidebar-link" href="{{ route('applicant') }}">
+        <li class="sidebar-item {{ request()->routeIs('applicant.showUndergraduateform')?'active':'' }}">
+            <a class="sidebar-link" href="{{ route('applicant.showUndergraduateform') }}">
                 <i class="align-middle" data-feather="list"></i>
                 <span class="align-middle">Undergraduate</span>
             </a>
         </li>
-        <li class="sidebar-item {{ request()->routeIs('applicant')?'active':'' }}">
-            <a class="sidebar-link" href="{{ route('applicant') }}">
+        <li class="sidebar-item {{ request()->routeIs('applicant.showbridgingform')?'active':'' }}">
+            <a class="sidebar-link" href="{{ route('applicant.showbridgingform') }}">
                 <i class="align-middle" data-feather="list"></i>
-                <span class="align-middle">UCE</span>
+                <span class="align-middle">Bridging</span>
             </a>
         </li>
         <li class="sidebar-item {{ request()->routeIs('applicant')?'active':'' }}">
@@ -72,8 +72,8 @@
                 <span class="align-middle">Upgrading</span>
             </a>
         </li>
-        <li class="sidebar-item {{ request()->routeIs('applicant')?'active':'' }}">
-            <a class="sidebar-link" href="{{ route('applicant') }}">
+        <li class="sidebar-item {{ request()->routeIs('applicant.showPostgraduateform')?'active':'' }}">
+            <a class="sidebar-link" href="{{ route('applicant.showPostgraduateform') }}">
                 <i class="align-middle" data-feather="list"></i>
                 <span class="align-middle">Postgraduate</span>
             </a>
@@ -86,8 +86,8 @@
 
 <li class="sidebar-item {{ request()->routeIs('applicant.select-application-type')?'active':'' }}">
     <a class="sidebar-link" href="{{ route('applicant.select-application-type') }}">
-        <i class="align-middle" data-feather="file-plus"></i>
-        <span class="align-middle">New Application</span>
+        <i class="align-middle" data-feather="dollar-sign"></i>
+        <span class="align-middle">Make Payment</span>
     </a>
 </li>
 
@@ -279,6 +279,18 @@
         text: '{{ session('success') }}',
         showConfirmButton: false,
     });
+</script>
+@endif
+
+@if(session('error'))
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: '{{ session('error') }}',
+        showConfirmButton: false,
+    });
+</script>
 @endif
 </script>
 	<script src="{{ asset('admin_assert/js/app.js') }}"></script>
