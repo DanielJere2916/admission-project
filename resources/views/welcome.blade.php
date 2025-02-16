@@ -125,20 +125,21 @@
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="{{ asset('admission_logo.png') }}" alt="University Logo" class="me-2" style="width: 50px; height: 50px;">
-            <!-- <span>University Name</span> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('programpage') }}">Programmes</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('campusespage') }}">Campuses</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('studentpage') }}">Student Life</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('researchpage') }}">Research</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contactpage') }}">Contact</a></li>
-                <li class="nav-item dropdown account-dropdown ms-3">
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown account-dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-user-circle fs-5"></i>
                     </a>
